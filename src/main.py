@@ -11,7 +11,7 @@ from termux_web_scraper.helpers import select_option_by_text, random_sleep, clic
 from termux_web_scraper.notifier import TelegramNotifier
 from termux_web_scraper.scraper_builder import ScraperBuilder
 
-from src.config import SCRAPER_OUTPUT_DIR, TELEGRAM_API_URL, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, PROVINCE, OFFICE, \
+from config import SCRAPER_OUTPUT_DIR, TELEGRAM_API_URL, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, PROVINCE, OFFICE, \
     PROCEDURE, NIE, FULL_NAME
 
 
