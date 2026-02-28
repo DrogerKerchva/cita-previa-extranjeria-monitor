@@ -29,4 +29,4 @@ fi
     --loop \
     --loop-timeout 10800 \
     --loop-error-ignore \
-    --output-dir /sdcard/cita-previa-extranjeria-monitor:/mnt/cita-previa-extranjeria-monitor
+    --output-dir ./temp
