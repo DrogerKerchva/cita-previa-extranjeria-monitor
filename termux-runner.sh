@@ -29,4 +29,4 @@ fi
     --loop \
     --loop-timeout 10800 \
     --loop-error-ignore \
-    --output-dir ./temp
+    --output-dir "$WORK_DIR"/temp
