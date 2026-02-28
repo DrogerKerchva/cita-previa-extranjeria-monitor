@@ -27,6 +27,6 @@ fi
     --scenario-file src/main.py \
     --upgrade \
     --loop \
-    --loop-timeout 10800 \
+    --loop-timeout 300 \
     --loop-error-ignore \
     --output-dir "$WORK_DIR"/temp
