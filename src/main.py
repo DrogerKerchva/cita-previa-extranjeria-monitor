@@ -54,28 +54,31 @@ def navigate_to_website(driver, state, notify):
 
 def select_province(driver, state, notify):
     select_option_by_text(driver, (By.NAME, 'form'), PROVINCE)
-    random_sleep(3000, 5000)
-    click_element(driver, (By.ID, "btnAceptar"))
+    random_sleep(1500, 2000)
+    # click_element(driver, (By.ID, "btnAceptar"))
+    driver.execute_script("envia()")
 
 
 def select_office_and_procedure(driver, state, notify):
-    select_option_by_text(driver, (By.NAME, 'sede'), OFFICE)
+    # select_option_by_text(driver, (By.NAME, 'sede'), OFFICE)
+    random_sleep(100, 500)
+    select_option_by_text(driver, (By.NAME, 'tramiteGrupo[1]'), PROCEDURE)
     random_sleep(1000, 2000)
-    select_option_by_text(driver, (By.NAME, 'tramiteGrupo[0]'), PROCEDURE)
-    random_sleep(3000, 5000)
+    # click_element(driver, (By.ID, "btnAceptar"))
     driver.execute_script("envia()")
 
 
 def navigate_through_warning_page(driver, state, notify):
-    random_sleep(3000, 5000)
+    random_sleep(1000, 2000)
     driver.execute_script("document.forms[0].submit()")
 
 
 def fill_in_personal_data(driver, state, notify):
     send_keys(driver, (By.NAME, "txtIdCitado"), NIE)
-    random_sleep(1000, 2000)
+    random_sleep(100, 500)
     send_keys(driver, (By.NAME, "txtDesCitado"), FULL_NAME)
-    random_sleep(3000, 5000)
+    random_sleep(1000, 2000)
+    # click_element(driver, (By.ID, "btnAceptar"))
     driver.execute_script("envia()")
 
 
@@ -92,7 +95,6 @@ def verify_response(driver, state, notify):
         print("Appointment slot found!")
         notify("Cita Previa Extranjeria Monitor: Appointment slot found!")
         save_screenshot(driver, os.path.join(SCRAPER_OUTPUT_DIR, "screenshots"))
-
 
 if __name__ == "__main__":
     main()
